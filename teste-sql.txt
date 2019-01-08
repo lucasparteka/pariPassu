@@ -1,0 +1,13 @@
+Seu nome: Lucas Parteka Leal
+
+1) SELECT * FROM en_filme ORDER BY data_lancamento ASC LIMIT 1
+
+2)SELECT alu.id_cliente, cli.nome, COUNT(alu.id_cliente) AS alugueis FROM en_aluguel alu
+JOIN en_cliente cli ON cli.id_cliente = alu.id_cliente
+GROUP BY alu.id_cliente, cli.nome ORDER BY alugueis ASC
+
+3) SELECT alu.id_cliente, cli.nome, COUNT(alu.id_cliente) AS alugueis, SUM(alu.valor) as total_gasto, EXTRACT(YEAR FROM alu.data_aluguel) as ano
+FROM en_aluguel alu
+JOIN en_cliente cli ON cli.id_cliente = alu.id_cliente
+WHERE TO_CHAR(alu.data_aluguel, 'YYYY') = '2019'
+GROUP BY alu.id_cliente, cli.nome, alu.data_aluguel ORDER BY total_gasto DESC

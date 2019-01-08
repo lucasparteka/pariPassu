@@ -1,0 +1,12 @@
+A primeira decisão foi construir um menu ciclico a fim de facilitar o uso do programa,
+evitando que tenha que ficar abrindo novamente a cada opção escolhida.
+
+A segunda decisão foi aceitar o fato que de por se estar usando interfaces, tive que 
+trabalhar nos metodos e classes me limitando a nao acrescentar coisas que poderiam vir a 
+facilitar o desenvolvimento, visto os requisitos que foram passados.
+
+A terceira foi que mesmo com um tempo relativamente curto, investi um tempo em
+tentar minimizar pequenos bugs que pudessem trazer erros como nullPointer e outros.
+
+A quarta decisão foi a de remover o main do package default e coloca-lo no package 
+view, visando aproximar um pouco mais o projeto do padrão MVC.
